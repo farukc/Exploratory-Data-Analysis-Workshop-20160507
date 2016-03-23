@@ -39,4 +39,27 @@ plot(hc)
 # now, harvest some data from web
 library(XML)
 url <- "http://www.beycan.net/1057/illerin-enlem-ve-boylamlari.html"
-koordinatList  <- readHTMLTable(url)
+cityList <- readHTMLTable(url, header = TRUE, colClasses = "character")
+
+# convert the data into a data frame structure
+cityDf <- as.data.frame(cityList, stringAsFactors = FALSE)
+names(cityDf) <- c("sıra", "il", "enlem", "boylam") 
+
+# eliminate first row
+rownames(cityDf) <- cityDf[ ,2]
+library(dplyr)
+cityDf <- select(cityDf, -sıra, -il)
+
+
+# convert the class of latitute and altitute into numeric
+cityDf$enlem <- sub(",", ".", cityDf$enlem)
+class(cityDf$enlem) <- "numeric"
+cityDf$boylam <- sub(",", ".", cityDf$boylam)
+cityDf[4,2] <- 43.021596 # there is a typo error in the origial document. Check Ağrı.
+class(cityDf$boylam) <- "numeric"
+
+# now, the data is ready for clustering analysis
+dim(cityDf)
+cityDist <- dist(cityDf)
+hc <- hclust(cityDist)
+plot(hc)
