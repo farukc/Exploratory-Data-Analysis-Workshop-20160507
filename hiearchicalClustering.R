@@ -1,14 +1,14 @@
 # create a data frame with two variables
-x <- c(2, 4, 7, 8, 23, 27, 31, 32)
-y <- c(21, 29, 25, 26, 12, 16, 19, 23)
+x <- rnorm(30, mean = c(20, 90, 80), sd = 5)
+y <- rnorm(30, mean = c(10, 40, 50), sd = 7)
 
 dat <- data.frame(x=x, y=y)
 
 # plot data
 plot(dat)
-text(dat$x, dat$y,
-     cex = 2,
-     col = rgb(0.4, 0.1, 0.1, alpha=0.3))
+text(dat$x+1, dat$y+3,
+     cex = 1,
+     col = rgb(0.4, 0.1, 0.1, alpha=0.7))
 
 # calculate the distance between points
 dist(dat)
@@ -21,8 +21,12 @@ plot(hc)
 # by recalling the euclidian geometry.
 
 # let's try to visualize the distance between points in 3 dimensional space
+z <- rnorm(30, mean = c(30, 60, 40), sd = 3)
+
+dat2 <- data.frame(x = x, y = y, z = z)
 library(rgl)
-plot3d(hp, disp, mpg, col="red", size=3)
+plot3d(dat2, col = "red")
+install.packages("quartz")
 
 # if we have more than 3 variable, we can no longer imagine,
 # but we can make calculations.
