@@ -3,7 +3,6 @@
 ### 2. Data Connections
 - Spreadsheets, Text files
 - APIs
-- Getting data from web pages
 - Other sources
 
 ### 3. Messy Data & Tidy Data
