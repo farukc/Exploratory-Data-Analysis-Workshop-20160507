@@ -19,3 +19,5 @@
 - K-means Clustering
 
 ### 5. Data Visualization in R
+- Examples with plotly
+- Examples with googleVis
