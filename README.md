@@ -9,14 +9,13 @@
 ### 3. Messy Data & Tidy Data
 - Data formation
 - R packages for data formation(dplyr, tidyr, reshape2)
-- 4. Exploratory Data Analysis
+
+### Exploratory Data Analysis
 - a. Plotting Capabilities of R
-- b. Plotting types
 - Plotting Systems in R (Base plotting System, lattice, ggplot2)
-- X-Y Plots, Pie Charts, Barplots
-- 2. Boxplots
-- 3. Categorical Data Plotting (i.e: mosaicplots)
-- 4. Histograms
-- 5. Other type of Plots
+- Colors in R
+- Examples for X-Y Plots, Pie Charts, Barplots, Boxplots, Mosaic Plots, Histograms...
+- Hiearchical Clustering
+- K-means Clustering
 
 ### 4. Data Visualization in R
