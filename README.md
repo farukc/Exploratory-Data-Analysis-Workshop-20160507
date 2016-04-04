@@ -10,7 +10,7 @@
 - Data formation
 - R packages for data formation(dplyr, tidyr, reshape2)
 
-### Exploratory Data Analysis
+### 4. Exploratory Data Analysis
 - Plotting Capabilities of R
 - Plotting Systems in R (Base plotting System, lattice, ggplot2)
 - Colors in R
@@ -18,4 +18,4 @@
 - Hiearchical Clustering
 - K-means Clustering
 
-### 4. Data Visualization in R
+### 5. Data Visualization in R
