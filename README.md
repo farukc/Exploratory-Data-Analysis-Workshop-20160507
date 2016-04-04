@@ -11,7 +11,7 @@
 - R packages for data formation(dplyr, tidyr, reshape2)
 
 ### Exploratory Data Analysis
-- a. Plotting Capabilities of R
+- Plotting Capabilities of R
 - Plotting Systems in R (Base plotting System, lattice, ggplot2)
 - Colors in R
 - Examples for X-Y Plots, Pie Charts, Barplots, Boxplots, Mosaic Plots, Histograms...
