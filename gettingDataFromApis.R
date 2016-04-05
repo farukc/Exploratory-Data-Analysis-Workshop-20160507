@@ -5,7 +5,7 @@ library(twitteR)
 
 consumer_key <- ""
 consumer_secret <- ""
-access_token <- "389497846-"
+access_token <- ""
 access_secret <- ""
 
 # authentication
