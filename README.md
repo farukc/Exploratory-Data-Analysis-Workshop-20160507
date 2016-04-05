@@ -13,7 +13,7 @@
 - Plotting Capabilities of R
 - Plotting Systems in R (Base plotting System, lattice, ggplot2)
 - Colors in R
-- Examples for X-Y Plots, Pie Charts, Barplots, Boxplots, Mosaic Plots, Histograms...
+- Examples for X-Y Plots, Barplots, Boxplots, Mosaic Plots, Histograms...
 - Hiearchical Clustering
 - K-means Clustering
 
