@@ -1,0 +1,179 @@
+R Programlama Dili Üzerine Genel Notlar
+========================================================
+author: İmran Kocabıyık 
+date: 30 Nisan 2016
+autosize: true
+transition: fade
+width: 1920
+height: 1080
+
+R Nedir?
+========================================================
+R açık kaynaklı bir program aynı zamanda bir yazılım dilidir.
+
+- Açık kaynak
+- Büyük ve aktif geliştirici topluluğu
+- Geniş bir kullanım alanı
+- Çeşitli çalışma alanları için geliştirilmiş binlerce paket
+
+Kullanım Alanları
+========================================================
+- Büyük veri
+- Modelleme
+- Simülasyon
+- Network Analizi
+- Metin İşleme
+- Görsel/Grafik işleme
+- ...
+
+Kullanım alanları
+========================================================
+Özetle; verinin olduğu her yer denilebilir.
+
+Örneğin;  
+
+Pazarlama & CRM:  
+<https://ds4ci.files.wordpress.com/2013/09/user08_jimp_custseg_revnov08.pdf/>
+
+Otomatizasyon:  
+<https://www.card.com/blog/fbrads-easy-access-facebook%E2%80%99s-marketing-api-r/>
+
+Satranç:  
+<http://jkunst.com/r/visualizing-chess-data-with-ggplot/>
+
+Zaman Serileri:  
+<http://www.hanselsolutions.com/blog/clustering-time-series.html>
+
+...
+
+R Kurulum
+========================================================
+<b>R</b>
+
+<https://cran.r-project.org/bin/windows/base/>
+
+<b>RStudio</b>
+
+Verimliliği oldukça arttıran bir arayüz(IDE).
+
+<https://www.rstudio.com/products/rstudio/download/>
+
+Nasıl Öğrenilebilir?
+========================================================
+Bir kaç alternatif:
+
+- <b>swirl paketi ile</b>
+```{r}
+library(swirl)
+```
+- <b>Coursera | Data Science Specialization</b>
+
+<https://www.coursera.org/specializations/jhu-data-science>
+
+- <b>Datacamp</b>
+
+<https://www.datacamp.com/>
+
+- <b>edX, Udacity...</b>
+
+- <b>Stackoverflow, GitHub...</b>
+
+
+Yüklü gelen paketler
+========================================================
+incremental: true
+R, bir takım yüklü paketler ile gelir:
+
+```{r}
+search()
+```
+
+Örnek Komutlar 1
+========================================================
+incremental: true
+1 ile 6 arasındaki sayı dizisini oluşturup x' eşle:
+```{r}
+x <- c(1,2,3,4,5,6)
+```
+
+x sayı dizisinin elemanlarının karesini al:
+```{r}
+x^2
+```
+
+bir zarı üç defa havaya at:
+```{r}
+sample(1:6, 3, replace = TRUE)
+```
+
+Örnek Komutlar 2
+========================================================
+x sayı dizisinin karelerinden oluşan diziyi grafile göster:
+```{r}
+x <- c(1,2,3,4,5,6)
+plot(x^2)
+```
+
+Yüklü Veri Setleri
+========================================================
+incremental: true
+R, pek çok ünlü veri setini içinde barındırır.  
+<https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html/>
+
+Örneğin, 
+```{r}
+```{r}
+library(datasets)
+head(mtcars)
+head(iris, 3)
+head(Titanic, 3)
+```
+
+Veri Setini inceleme 1:
+========================================================
+incremental: true
+```{r}
+str(mtcars)
+```
+```{r}
+dim(mtcars)
+```
+
+Veri Setini inceleme 2:
+========================================================
+```{r}
+summary(mtcars)
+```
+
+Yardım Edinme:
+========================================================
+incremental: true
+R yardım konularını komut ile çağırmak için:
+```{r}
+help(read.csv)
+# ya da
+?read.csv
+```
+```{r}
+# bir fonksiyonun argümanlarını öğrenmek için
+args(read.csv)
+```
+
+Bunlar dışında:
+- CRAN arşivindeki manuel dosyası
+
+Örneğin: ggplot2'nin referans dosyası (Reference Manual): <https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf>
+
+- Stackoverflow
+
+Paket Kurma ve Aktifleştirme:
+========================================================
+incremental: true
+Paket Kurulumu:
+```{r}
+install.packages("RGA", repos="http://cran.rstudio.com/")
+```
+Paketi aktifleştirmek:
+```{r}
+library(RGA)
+```
