@@ -12,19 +12,15 @@ R Nedir?
 R açık kaynaklı bir program aynı zamanda bir yazılım dilidir.
 
 - Açık kaynak
-- Geniş bir geliştirici topluluğu
+- Büyük ve aktif geliştirici topluluğu
 - Geniş bir kullanım alanı
 - Çeşitli çalışma alanları için geliştirilmiş binlerce paket
 
 Kullanım Alanları
 ========================================================
 - Büyük veri
-- İstatistiksel çıkarsama
-- Matematiksel modelleme
+- Modelleme
 - Simülasyon
-- Keşfedici Veri Çözümlemesi
-- Nesne Tabanlı Progamlama
-- Duygu Analizi
 - Network Analizi
 - Metin İşleme
 - Görsel/Grafik işleme
@@ -34,9 +30,21 @@ Kullanım alanları
 ========================================================
 Özetle; verinin olduğu her yer denilebilir.
 
-Örneğin; satranç:
+Örneğin;  
 
+Pazarlama & CRM:  
+<https://ds4ci.files.wordpress.com/2013/09/user08_jimp_custseg_revnov08.pdf/>
+
+Otomatizasyon:  
+<https://www.card.com/blog/fbrads-easy-access-facebook%E2%80%99s-marketing-api-r/>
+
+Satranç:  
 <http://jkunst.com/r/visualizing-chess-data-with-ggplot/>
+
+Zaman Serileri:  
+<http://www.hanselsolutions.com/blog/clustering-time-series.html>
+
+...
 
 R Kurulum
 ========================================================
@@ -46,7 +54,7 @@ R Kurulum
 
 <b>RStudio</b>
 
-Zorunlu değil ama verimliliği oldukça arttıran bir arayüz.
+Verimliliği oldukça arttıran bir arayüz(IDE).
 
 <https://www.rstudio.com/products/rstudio/download/>
 
@@ -65,6 +73,20 @@ library(swirl)
 - <b>Datacamp</b>
 
 <https://www.datacamp.com/>
+
+- <b>edX, Udacity...</b>
+
+- <b>Stackoverflow, GitHub...</b>
+
+
+Yüklü gelen paketler
+========================================================
+incremental: true
+R, bir takım yüklü paketler ile gelir:
+
+```{r}
+search()
+```
 
 Örnek Komutlar 1
 ========================================================
@@ -95,7 +117,8 @@ plot(x^2)
 Yüklü Veri Setleri
 ========================================================
 incremental: true
-R, pek çok ünlü veri setini içinde barındırır.
+R, pek çok ünlü veri setini içinde barındırır.  
+<https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html/>
 
 Örneğin, 
 ```{r}
