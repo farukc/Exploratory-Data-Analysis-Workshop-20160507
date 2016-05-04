@@ -1,0 +1,183 @@
+<style>
+.small-code pre code {
+  font-size: 1em;
+}
+</style>
+
+<style>
+.midcenter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+</style>
+
+
+dplyr: VERİ DÖNÜŞTÜRME
+========================================================
+author: İmran Kocabıyık 
+date: 7 Mayıs 2016
+autosize: true
+transition: fade
+width: 1280
+height:720
+font-family: ubuntu
+autosize: true
+
+
+SELECT
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+library(dplyr)
+# select: Subsetting Columns
+iris <- tbl_df(iris)
+select(iris, Species, Petal.Length)
+```
+
+SELECT
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+select(iris, starts_with("Sepal"))
+```
+
+SELECT
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+select(iris, -starts_with("Petal"))
+```
+
+SELECT
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+select(iris, Species, everything())
+```
+
+FILTER
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+# FILTER: Subsetting Rows
+mtcars <- tbl_df(mtcars)
+filter(mtcars, cyl==4)
+filter(mtcars, cyl==4&gear==3)
+```
+
+ARRANGE
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+# ARRANGE
+arrange(mtcars, hp)
+```
+
+ARRANGE
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+# ARRANGE
+arrange(mtcars, desc(mpg))
+```
+
+GROUP_BY and SUMMARIZE
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+# GROUP_BY and SUMMARIZE
+summarize(mtcars, mean(disp))
+summarize(group_by(mtcars, cyl), mean(disp))
+summarize(group_by(mtcars, cyl), m = mean(disp), sd = sd(disp))
+```
+
+PIPE OPERATOR: %>%
+========================================================
+incremental: true
+class: small-code
+width: 1920
+height:1080
+
+![](https://pbs.twimg.com/media/CgrmPXiVEAEywqn.jpg)
+
+
+PIPE OPERATOR: %>%
+========================================================
+incremental: false
+class: small-code
+width: 1920
+height:1080
+
+```{r, eval=FALSE}
+fonksiyon(x)
+
+mean(1:10)
+```
+
+```{r, eval=FALSE}
+ucuncu(ikinci(birinci(x)))
+```
+
+***
+```{r, eval=FALSE}
+x %>% fonksiyon()
+
+1:10 %>% mean()
+```
+
+```{r, eval=FALSE}
+birinci(x) %>% ikinci() %>% ucuncu()
+```
+
+PIPE OPERATOR: %>%
+========================================================
+incremental: true
+class: small-code
+
+
+```{r, eval=FALSE}
+veri <- head(transform(subset(read.csv('file.csv'),
+                                  variable_a > x),
+                           variable_c = variable_a/variable_b),
+                 100)
+```
+
+```{r, eval=FALSE}
+veri <- read.csv('file.csv')
+veri <- subset(the_data, variable_a > x)
+veri <- transform(the_data, variable_c = variable_a/variable_b)
+veri <- head(the_data, 100)
+```
+
+```{r, eval=FALSE}
+veri <-
+  read.csv('file.csv') %>%
+  subset(variable_a > x) %>%
+  transform(variable_c = variable_a/variable_b) %>%
+  head(100)
+```
+
+
+PIPE OPERATOR: %>%
+========================================================
+incremental: true
+class: small-code
+
+![](https://qph.is.quoracdn.net/main-qimg-7435fe22f369a8a530c8a25905824e36?convert_to_webp=true)
