@@ -1,0 +1,40 @@
+<style>
+.small-code pre code {
+  font-size: 1em;
+}
+</style>
+
+<style>
+.midcenter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+</style>
+
+
+R ile Grafik
+========================================================
+author: İmran Kocabıyık 
+date: 7 Mayıs 2016
+autosize: true
+transition: fade
+width: 1280
+height:720
+font-family: ubuntu
+autosize: true
+
+Temel Grafik Kütüphanesi: graphics
+========================================================
+class: small-code
+
+```{r}
+plot(mtcars$mpg, mtcars$hp,
+     cex = 5,
+     pch = 19,
+     col = rgb(0.4, 0.1, 0.1, alpha = 0.8),
+     main = "Örnek Grafik",
+     xlab = "Miles Per Gallon",
+     ylab = "Horse Power",
+     points(mtcars$cyl, mtcars$disp))
+```
