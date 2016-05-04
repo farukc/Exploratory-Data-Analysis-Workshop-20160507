@@ -178,5 +178,6 @@ sehirKumeleri <- kmeans(cityDf, centers=7)
 turkiye <- get_map(location = "turkey", source = 'stamen', maptype = 'toner', zoom=5)
 
 ggmap(turkiye) +
-        geom_point(size=5, alpha = 3/4, aes(lon,lat, color=factor(sehirKumeleri$cluster)), data=cityDf)
-# http://www.hanselsolutions.com/blog/clustering-time-series.html
+        geom_point(size=5, alpha = 3/4, aes(lon,lat, color=factor(sehirKumeleri$cluster)), data=cityDf) 
+
+# A good example of clustering with time series: http://www.hanselsolutions.com/blog/clustering-time-series.html
