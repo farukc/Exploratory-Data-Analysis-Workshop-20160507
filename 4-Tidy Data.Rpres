@@ -49,17 +49,10 @@ incremental: true
 - **Her gözlem bir satır**
 - **Her bir ölçüm bir tablo**
 
-Dağınık Data Örnekleri
-========================================================
-incremental: true
+![](http://garrettgman.github.io/images/tidy-1.png)
 
-- Sütün isimlerinin değişken değil, değer olması
-- Birden fazla değişkenin tek bir sutünda bulunması
-- Değişkenlerin hem satır hem de sütünda bulunması
-- Birden fazla ölçümleme çalışmasının tek bir tabloda bulunması
-- Tek bir ölçümleme çalışmasının birden fazla tabloda bulunması
 
-Sütun isimlerinin değişken değil, değer olması
+Dağınık Data
 ========================================================
 height: 600
 width: 800
@@ -110,3 +103,38 @@ maleNamesTidy <- gather(maleNames, key = year, value = rank, -name, na.rm = TRUE
 head(maleNamesTidy)
 dim(maleNamesTidy)
 ```
+
+Dağınık Data Örnek 2: Hava Durumu
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+weather <- read.delim(
+ file = "http://stat405.had.co.nz/data/weather.txt",
+ stringsAsFactors = FALSE
+)
+head(weather)
+```
+
+Dağınık Data Örnek 2: Hava Durumu
+========================================================
+incremental: true
+class: small-code
+
+```{r}
+duzenli <- gather(weather, key="günler", value="değer", -id, -year, -month, -element, na.rm = TRUE)
+head(duzenli)
+```
+
+
+Dağınık Data Sebepleri:
+========================================================
+incremental: true
+class: small-code
+
+- Sütün isimlerinin değişken değil, değer olması
+- Birden fazla değişkenin tek bir sutünda bulunması
+- Değişkenlerin hem satır hem de sütünda bulunması
+- Birden fazla ölçümleme çalışmasının tek bir tabloda bulunması
+- Tek bir ölçümleme çalışmasının birden fazla tabloda bulunması
