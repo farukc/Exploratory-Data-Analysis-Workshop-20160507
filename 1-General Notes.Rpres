@@ -33,13 +33,13 @@ Kullanım alanları
 Örneğin;  
 
 Pazarlama & CRM:  
-<https://ds4ci.files.wordpress.com/2013/09/user08_jimp_custseg_revnov08.pdf/>
+<https://ds4ci.files.wordpress.com/2013/09/user08_jimp_custseg_revnov08.pdf>
 
 Otomatizasyon:  
-<https://www.card.com/blog/fbrads-easy-access-facebook%E2%80%99s-marketing-api-r/>
+<https://www.card.com/blog/fbrads-easy-access-facebook%E2%80%99s-marketing-api-r>
 
 Satranç:  
-<http://jkunst.com/r/visualizing-chess-data-with-ggplot/>
+<http://jkunst.com/r/visualizing-chess-data-with-ggplot>
 
 Zaman Serileri:  
 <http://www.hanselsolutions.com/blog/clustering-time-series.html>
@@ -50,7 +50,7 @@ R Kurulum
 ========================================================
 <b>R</b>
 
-<https://cran.r-project.org/bin/windows/base/>
+<https://cran.r-project.org>
 
 <b>RStudio</b>
 
@@ -126,23 +126,6 @@ R, pek çok ünlü veri setini içinde barındırır.
 library(datasets)
 head(mtcars)
 head(iris, 3)
-head(Titanic, 3)
-```
-
-Veri Setini inceleme 1:
-========================================================
-incremental: true
-```{r}
-str(mtcars)
-```
-```{r}
-dim(mtcars)
-```
-
-Veri Setini inceleme 2:
-========================================================
-```{r}
-summary(mtcars)
 ```
 
 Yardım Edinme:
