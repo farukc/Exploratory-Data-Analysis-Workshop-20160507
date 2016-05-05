@@ -1,6 +1,6 @@
-## GETTING DATA FROM SPREADSHEETS, TEXT FILES, AND WEB ######
+# GETTING DATA FROM SPREADSHEETS, TEXT FILES, AND WEB -----
 
-# Example 1: Pisa Scores #####
+# 1. Getting data from flat files -----
 
 # file url to be downloaded
 url <- "https://stats.oecd.org/sdmx-json/data/DP_LIVE/.PISAMATH.GIRL+BOY../OECD?contentType=csv&detail=code&separator=comma&csv-lang=en"
@@ -12,10 +12,8 @@ if(!file.exists("pisa.csv")) {
 
 # load file
 pisaData <- read.csv("pisa.csv", stringsAsFactors = FALSE)
-pisaData <- pisaData[ ,1:7]
-names(pisaData) <- c("location", "indicator", "subject", "measure", "frequency", "time", "value")
 
-# Example 2: Common Turkish Names #####
+# 1. Getting data from spreadsheet files -----
 
 # getting the data from TUIK (Turkish Statistics Institute)
 maleURL <- "http://tuik.gov.tr/PreIstatistikTablo.do?istab_id=1332"
@@ -36,9 +34,8 @@ library(readxl)
 maleNames <- read_excel("male.xls", sheet=1)
 femaleNames <- read_excel("female.xls", sheet = 1)
 
-# Example 3: Getting Data from Web #####
+# Example 3: Getting Data from Web -----
 library(XML)
-url <- "http://www.beycan.net/1057/illerin-enlem-ve-boylamlari.html"
-cityList <- readHTMLTable(url, header = TRUE, colClasses = "character")
+locUrl <- "http://www.beycan.net/1057/illerin-enlem-ve-boylamlari.html"
+cityList <- readHTMLTable(locUrl, header = TRUE, colClasses = "character")
 cityDf <- as.data.frame(cityList, stringAsFactors = FALSE)
-names(cityDf) <- c("sıra", "il", "enlem", "boylam")
