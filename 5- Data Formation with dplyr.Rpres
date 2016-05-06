@@ -13,7 +13,7 @@
 </style>
 
 
-dplyr: VERİ DÖNÜŞTÜRME
+VERİYİ DÜZENLEME | dplyr
 ========================================================
 author: İmran Kocabıyık 
 date: 7 Mayıs 2016
@@ -102,7 +102,6 @@ incremental: true
 class: small-code
 
 ```{r}
-# GROUP_BY and SUMMARIZE
 summarize(mtcars, mean(disp))
 summarize(group_by(mtcars, cyl), mean(disp))
 summarize(group_by(mtcars, cyl), m = mean(disp), sd = sd(disp))
