@@ -68,5 +68,5 @@ id <- 0000000
 
 # source report
 sourceReport <- get_ga(id, start.date = "2015-01-01", end.date = "yesterday",
-                       metrics = "ga:sessions",
-                       dimensions = "ga:sourceMedium, ga:pageTitle")
+                       metrics = "ga:pageviews",
+                       dimensions = "ga:operatingSystem")
