@@ -9,16 +9,16 @@ height: 1080
 
 R Nedir?
 ========================================================
-R açık kaynaklı bir program aynı zamanda bir yazılım dilidir.
+R açık kaynaklı bir program aynı zamanda bir programlama dilidir.
 
 - Açık kaynak
-- Büyük ve aktif geliştirici topluluğu
-- Geniş bir kullanım alanı
+- Büyük ve aktif bir kullanıcı kitlesi
+- Geniş kullanım alanı
 - Çeşitli çalışma alanları için geliştirilmiş binlerce paket
 
 Kullanım Alanları
 ========================================================
-- Büyük veri
+
 - Modelleme
 - Simülasyon
 - Network Analizi
@@ -118,7 +118,7 @@ Yüklü Veri Setleri
 ========================================================
 incremental: true
 R, pek çok ünlü veri setini içinde barındırır.  
-<https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html/>
+<https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html>
 
 Örneğin, 
 ```{r}
