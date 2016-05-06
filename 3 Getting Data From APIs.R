@@ -29,6 +29,7 @@ addSMA(55)
 # install.packages("twitteR")
 library(twitteR)
 
+## Twitter
 consumer_key <- ""
 consumer_secret <- ""
 access_token <- ""
@@ -49,8 +50,9 @@ class(loc$latitude) <- "numeric"
 class(loc$longitude) <- "numeric"
 
 # visualize
+# install.packages(ggmap)
+library(ggmap)
 qmplot(longitude, latitude, data = loc, colour = I("red"), size = I(3), darken = .3, maptype = "toner")
-
 
 # GETTING DATA FROM GOOGLE ANALYTICS -----
 
@@ -59,9 +61,10 @@ qmplot(longitude, latitude, data = loc, colour = I("red"), size = I(3), darken =
 library(RGA)
 authorize()
 
-accountId <- 00000000
+## RGA
+accountId <- 000000
 profiles <- list_profiles(accountId)
-id <- 00000000 # your id here
+id <- 0000000
 
 # source report
 sourceReport <- get_ga(id, start.date = "2015-01-01", end.date = "yesterday",
